@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/anatolian" type="text/css"/> 
+    <script src="./app.js"></script>
+    <title>Home</title>
+    <style>
+            .btn-search {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-search:hover {
+            background-color: #45a049;
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+        <!-- Navigation Buttons at the Top -->
+        <div style="        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+    ">
+        <a href="./search" class="btn-search">Want something new?</a>
+        <a href="./reservation" class="btn-search">Reserve a Book?</a>
+        <a href="./return" class="btn-search">Done with your Booking?</a>
+        <a href="/logout"> <div class="btn-search"> Logout? </div> </a>
+    </div>
+
+    <br>
+    <br>
+    <div class="image-grid" style="position: absolute; margin-bottom: -10%;">
+        <img src="./images/48laws.jpg" alt="">
+        <img src="./images/eleven.jpg" alt="">
+        <img src="./images/fitness_book.jpg" alt="">
+        <img src="./images/freakonomics.jpg" alt="">
+        <img src="./images/johngreen.jpg" alt="">
+        <img src="./images/milk_andhoney.jpg" alt="">
+        <img src="./images/romance1.jpg" alt="">
+        <img src="./images/secret.jpg" alt="">
+    </div>
+</body>
+</html>

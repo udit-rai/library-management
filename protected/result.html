@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+
+    <% if (message) { %>
+        <p><%= message %></p>
+    <% } else { %>
+        <ul>
+            <% books.forEach(book => { %>
+                <li>
+                    <h2><%= book.Name %></h2>
+                    <img src="<%= book.CoverImage %>" alt="<%= book.Name %> cover" />
+                    <p><%= book.Description %></p>
+                    <p><strong>Availability:</strong> <%= book.availability %></p>
+                </li>
+            <% }) %>
+        </ul>
+    <% } %>
+</body>
+</html>

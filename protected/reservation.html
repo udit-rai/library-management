@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve a Book </title>
+    <link rel="stylesheet" href="styles.css">
+    <link type="text/css" rel="stylesheet" href="http://cdn.dcodes.net/2/contact_forms/css/dc_form_contact_dark.css" />
+    <link type="text/css" rel="stylesheet" href="http://cdn.dcodes.net/2/contact_forms/css/dc_form_contact_light.css" />
+</head>
+<body>
+    <div style="margin-bottom:20px; padding:20px 20px 0; color:#ccc; background:#000000; border:1px solid #000; border-radius:8px;"> 
+        <form action="/reservation/add" method= "post" class="dc_form_contact_dark nolabel">
+            <h1> Book Reservation Form </h1>
+            <input type="text" name="memberId" class="form-input" placeholder="User ID" required />
+            <input type="text" name="isbn" class="form-input" placeholder="ISBN of book" required />
+          <input class="form-btn" type="submit" value="Apply for reserving book" />
+        </form>
+      </div>
+</body>
+</html>

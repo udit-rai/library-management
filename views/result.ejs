@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Search Results</h1>
+
+    <% if (books && books.length > 0) { %>
+        <div class="books-list">
+            <% books.forEach(book => { %>
+                <div class="book-item">
+                    <h2><%= book.Title %></h2>  <!-- Book Title -->
+
+                    <!-- Book Cover Image -->
+                    <img src="<%= book.CoverImage %>" alt="<%= book.Title %>" style="max-width: 150px;" />
+
+                    <!-- ISBN Display -->
+                    <p>ISBN: <%= book.ISBN %></p>
+                </div>
+            <% }); %>
+        </div>
+    <% } else { %>
+        <p><%= message || "No results found." %></p>
+    <% } %>
+</body>
+</html>

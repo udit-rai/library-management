@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Member </title>
+    <link rel="stylesheet" href="/styles.css">
+    <link type="text/css" rel="stylesheet" href="http://cdn.dcodes.net/2/contact_forms/css/dc_form_contact_dark.css" />
+    <link type="text/css" rel="stylesheet" href="http://cdn.dcodes.net/2/contact_forms/css/dc_form_contact_light.css" />
+</head>
+<body style="background-image: url(./images/admin_bg.jpg);">
+    <form id="memberForm" action="/members/del" method= "post" class="dc_form_contact_light">
+        <h1> Delete A Membership </h1>
+        <label for="email">Email <span></span></label>
+        <input type="email" name="email" class="form-input" required />
+        <input class="form-btn" type="submit" value="Submit" />
+      </form>
+</body>
+<!-- Popup Message -->
+<div id="popup" style="display: none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+     background: green; color: white; padding: 10px; border-radius: 5px;">
+    Member successfully deleted!
+</div>
+
+<script>
+    document.getElementById("memberForm").addEventListener("submit", async function(event) {
+        event.preventDefault(); // Stop default form submission
+    
+        // Get only the email input value
+        const email = document.querySelector("input[name='email']").value;
+    
+        try {
+            const response = await fetch("/members/del", {
+                method: "POST",
+                headers: { 
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ email }) // Send only email
+            });
+    
+            const data = await response.json();
+    
+            if (response.ok) {
+                // Show success message
+                document.getElementById("popup").textContent = "Member successfully deleted!";
+                document.getElementById("popup").style.display = "block";
+                setTimeout(() => document.getElementById("popup").style.display = "none", 3000);
+            } else {
+                alert("Error: " + data.message);
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            alert("Something went wrong.");
+        }
+    });
+    </script>
+    

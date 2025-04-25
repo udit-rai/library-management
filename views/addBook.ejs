@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Member </title>
+    <link rel="stylesheet" href="/styles.css">
+    <link type="text/css" rel="stylesheet" href="http://cdn.dcodes.net/2/contact_forms/css/dc_form_contact_dark.css" />
+    <link type="text/css" rel="stylesheet" href="http://cdn.dcodes.net/2/contact_forms/css/dc_form_contact_light.css" />
+</head>
+<body style="background-image: url(./images/admin_bg.jpg);">
+    <form id="bookForm" action="/books/add" method= "post" class="dc_form_contact_light">
+        <h1> Add A Book </h1>
+        <label for="isbn"> ISBN (Format: 123-RestofNumbers) <span></span></label>
+        <input type="text" name="isbn" class="form-input" required />
+        <label for="coverpiclink"> Link to Cover Picture <span></span></label>
+        <input type="text" name="coverpiclink" class="form-input" required />
+        <label for="title">Title:</label>
+        <input type="text" name="title" required />
+        
+        <input class="form-btn" type="submit" value="Add Book" />
+      </form>
+</body>
+<!-- Popup Message -->
+<div id="popup" style="display: none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+     background: green; color: white; padding: 10px; border-radius: 5px;">
+    Book successfully added!
+</div>
+
+<script>
+    document.getElementById("bookForm").addEventListener("submit", async function(event) {
+        event.preventDefault();
+        const isbn = document.querySelector("input[name='isbn']").value;
+        const coverpiclink = document.querySelector("input[name='coverpiclink']").value;
+        const title = document.querySelector("input[name='title']").value;
+
+        try {
+            const response = await fetch("/books/add", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ isbn, coverpiclink, title })
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                document.getElementById("popup").style.display = "block";
+                setTimeout(() => document.getElementById("popup").style.display = "none", 3000);
+            } else {
+                alert("Error: " + data.message);
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            alert("Something went wrong.");
+        }
+    });
+</script>
+</html>
