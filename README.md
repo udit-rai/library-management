@@ -25,6 +25,9 @@ The **Library Management System (LMS)** is a **powerful yet user-friendly web ap
    ```sh
    git clone https://github.com/your-repo/library-management.git
 
+2️⃣ **Adjust values in dbconfig**
+
+
 ## 📷 Screenshots
 ![User Login](./'LMS Screens'/login_page.png)
 ![Menu](./'LMS Screens'/lms_menu.png)
