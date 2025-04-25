@@ -15,7 +15,7 @@ The **Library Management System (LMS)** is a **powerful yet user-friendly web ap
 - ✅ **Book Management:** Admins can add, delete, and update book records dynamically.
 - ✅ **Session-Based Security:** Prevent unauthorized access with session authentication.
 - ✅ **Secure Login for Admins:** Multi-step authentication ensures higher security for administrators.
-- ✅ **Anti Crawler Features:** Fake 404 message ensures higher security against automated tools.
+- ✅ **Anti Crawler Features:** Fake 404 messages on unauthenticated access attempts ensures higher security against automated tools.
 
 ## 🛠 Tech Stack
 - 🔹 **Backend:** Node.js, Express.js
