@@ -24,18 +24,19 @@ The **Library Management System (LMS)** is a **powerful yet user-friendly web ap
 1️⃣ **Clone the repository:**
    ```sh
    git clone https://github.com/your-repo/library-management.git
+   ```
 
 2️⃣ **Adjust values in dbconfig**
 
 
 ## 📷 Screenshots
-![User Login](./'LMS Screens'/login_page.png)
+![User_Login](./'LMS Screens'/login_page.png)
 ![Menu](./'LMS Screens'/lms_menu.png)
-![Security 404 Function](./'LMS Screens'/POC_security_partone.png)
-![Security 404 Function](./'LMS Screens'/POC_security_parttwo.png)
-![Reserve Books](./'LMS Screens'/reservebooks.png)
-![Return Books](./'LMS Screens'/returnbooks.png)
-![Security 404 Function](./'LMS Screens'/admin_login.png)
-![User Login](./'LMS Screens'/admin_index.png)
+![Security_404_Function](./'LMS Screens'/POC_security_partone.png)
+![Security_404_Function](./'LMS Screens'/POC_security_parttwo.png)
+![Reserve_Books](./'LMS Screens'/reservebooks.png)
+![Return_Books](./'LMS Screens'/returnbooks.png)
+![Admin_Login](./'LMS Screens'/admin_login.png)
+![Admin_Index](./'LMS Screens'/admin_index.png)
 
 
