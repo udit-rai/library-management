@@ -1,7 +1,7 @@
 const config = {
-    user: 'new_user',
+    user: 'user',
     password: 'password',
-    server: 'localhost',
+    server: 'server',
     port: 1433,
     database: 'Lib_MS',
     options: {
