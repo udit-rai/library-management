@@ -30,13 +30,13 @@ The **Library Management System (LMS)** is a **powerful yet user-friendly web ap
 
 
 ## 📷 Screenshots
-![User_Login](./'LMS Screens'/login_page.png)
-![Menu](./'LMS Screens'/lms_menu.png)
-![Security_404_Function](./'LMS Screens'/POC_security_partone.png)
-![Security_404_Function](./'LMS Screens'/POC_security_parttwo.png)
-![Reserve_Books](./'LMS Screens'/reservebooks.png)
-![Return_Books](./'LMS Screens'/returnbooks.png)
-![Admin_Login](./'LMS Screens'/admin_login.png)
-![Admin_Index](./'LMS Screens'/admin_index.png)
+![User_Login](./LMS Screens/login_page.png)
+![Menu](./LMS Screens/lms_menu.png)
+![Security_404_Function](./LMS Screens/POC_security_partone.png)
+![Security_404_Function](./LMS Screens/POC_security_parttwo.png)
+![Reserve_Books](./LMS Screens/reservebooks.png)
+![Return_Books](./LMS Screens/returnbooks.png)
+![Admin_Login](./LMS Screens/admin_login.png)
+![Admin_Index](./LMS Screens/admin_index.png)
 
 
