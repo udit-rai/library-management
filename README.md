@@ -30,7 +30,7 @@ The **Library Management System (LMS)** is a **powerful yet user-friendly web ap
 
 
 ## 📷 Screenshots
-![User_Login](./LMS Screens/login_page.png)
+![User_Login](https://raw.githubusercontent.com/udit-rai/library-management/main/LMS%20Screens/login_page.png)
 ![Menu](./LMS Screens/lms_menu.png)
 ![Security_404_Function](./LMS Screens/POC_security_partone.png)
 ![Security_404_Function](./LMS Screens/POC_security_parttwo.png)
